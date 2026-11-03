@@ -1,69 +1,88 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="id" class="scroll-smooth">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Day 1 Magang Lab Mulmed</title>
-  <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Portofolio Rafid Maulana Zaldas">
+<title>Portofolio – Rafid Maulana Zaldas</title>
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.1.4"></script>
+<style>
+  :root{--bg:#dbeafe;--fg:#0f172a;--card:#ffffff;--accent:#16a34a;--muted:#334155;--hdr:#16a34a;
+    box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+  :root[data-theme="dark"]{--bg:#0f172a;--fg:#e2e8f0;--card:#1e293b;--accent:#4ade80;--muted:#94a3b8;--hdr:#166534}
+  @media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#0f172a;--fg:#e2e8f0;--card:#1e293b;--accent:#4ade80;--muted:#94a3b8;--hdr:#166534}}
+  html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px)}
+  body{background:var(--bg);color:var(--fg);font-family:Georgia,'Times New Roman',serif;min-height:100vh}
+  body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--hdr);z-index:10}
+</style>
 </head>
 <body>
-<header>
-        <div class="navbar">
-            <a href= "#home">home </a>
-            <a href= "#about">about </a>
-            <a href= "#skill">skill </a>
-            <a href= "#project">project </a>
-            <a href= "#contact">contact </a>
-        </div>
-        
-    </header>
-<hr>
- <h1>Ayam Terunik di Dunia</h1>
-  <p>By: Rafid Maulana Zaldas 5024251028</p>
-  <section id = "home">
-    <img src="https://dailychickens.com/wp-content/uploads/2023/08/Ayam-Cemani-walking-outdoors-2048x1365.jpg" alt="ini ayam" width="180" height="180" style="border-radius: 50%;object-fit: cover;">
-    <p>Computer Engineering Chicken </p>
-    <h2>Ayam Cemani</h2>
-    <p>Ayam yang dihitamkan oleh cuaca panas surabaya yang sangat ekstrem</p>
-    <hr>
+<header class="sticky z-20" style="top:env(safe-area-inset-top,0px);background:var(--hdr)">
+  <div class="max-w-[960px] min-h-[68px] mx-auto px-6 flex items-center justify-between flex-wrap gap-4">
+    <a href="https://github.com/b201lab/template-web-portofolio/blob/main/Modul/Modul-1-HTML-Dasar/README.md" class="font-bold text-white">GitHub</a>
+    <nav class="flex gap-5 font-bold text-white">
+      <a href="#home" class="hover:underline">Home</a>
+      <a href="#about" class="hover:underline">About</a>
+      <a href="#skill" class="hover:underline">Skill</a>
+      <a href="#project" class="hover:underline">Project</a>
+      <a href="#contact" class="hover:underline">Contact</a>
+    </nav>
+  </div>
+</header>
 
-
-  </section>
-  <section id="about">
-    <h2>A Little about Me</h2>
-    <p>Ayam yang hitam ini memiliki banyak sekali Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat neque non nam ab voluptas dolorum, iusto explicabo illo soluta repellendus officiis reiciendis molestiae ad odio, dolorem autem, provident sunt laboriosam!</p>
-    <hr>
-
-  </section>
-  <section id="skill">
-    <h2>Skill</h2>
-    <p>ayam ini mempunyai skill di bidang Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum minus facilis aperiam dolore iusto veritatis. Accusamus porro beatae sed illo quod a. Provident totam dolor repellendus, dolore ea perspiciatis quasi. Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga, tempore doloribus. Repellendus a assumenda laboriosam saepe, labore quod corporis facere eaque vitae hic similique? Sequi cum eaque nesciunt iusto aliquam. Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio blanditiis, delectus ex tempora tenetur exercitationem assumenda quasi laborum velit numquam amet incidunt quaerat vitae corporis, minus sint. In, accusamus accusantium!</p>
-    <span>HTML</span>
-    <span>Python</span>
-    <span>C++</span>
-    <hr>
-  </section>
-  <section id="project">
-   
-    <h2>Project</h2>
-     <ul>
-        <li><h3>Hospital database system</h3></li>
-        <p>blablablabalbalblabalbalbalblabalblabalblablabalbal</p>
-        <li><h3>ESP32 Digital Clock</h3></li>
-        <p>blebelbelbelbelbelbelbelbelbelbelbelbelbelbelbellebl</p>
-        <li><h3>Portable Website</h3></li>
-        <p>blublubulbulublbulbulublbulbulbulublbulbulbulublbulbululbubulbulbulu</p>
-    </ul>
-    <hr>
-  </section>
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email :<a href="https://en.wikipedia.org/wiki/Prabowo_Subianto">rafidzaldass@gmail.com</a></p>
-    <p>Whatsapp : <a href="https://en.wikipedia.org/wiki/Benjamin_Netanyahu">085274437575</a></p>
-    <a href= "https://github.com/b201lab/template-web-portofolio/blob/main/Modul/Modul-1-HTML-Dasar/README.md">github gua
-        </a>
-
+<main class="max-w-[960px] mx-auto px-6">
+  <section id="home" class="py-12 sm:py-20 flex flex-col-reverse sm:flex-row items-start sm:items-center gap-8 sm:gap-12">
+    <div class="flex-1">
+      <p class="text-sm font-bold tracking-[0.15em] uppercase" style="color:var(--accent)">Sepuluh Nopember Institute of Technology</p>
+      <h1 class="mt-3 text-4xl sm:text-5xl font-bold leading-tight">Rafid Maulana Zaldas  </h1>
+      <p class="mt-2 text-lg" style="color:var(--muted)">Computer Engineering</p>
+      <h2 class="mt-6 text-2xl font-bold">Hi Everyone!</h2>
+      <p class="mt-1" style="color:var(--muted)">Namaku Rafid Maulana Zaldas. Sekarang aku lagi menempuh Studi di Institut Sepuluh Nopember. Melalui Portofolio ini, aku ingin share sedikit mengenai diriku</p>
+      <a href="#contact" class="inline-block mt-6 px-5 py-2.5 rounded-full font-bold text-white hover:opacity-90" style="background:var(--hdr)">Hubungi Saya</a>
+    </div>
+     <img src="https://cdn.pixabay.com/photo/2023/05/28/21/15/chicken-8024627_960_720.jpg" alt="Foto profil Rafid" class="w-36 h-36 sm:w-44 sm:h-44 shrink-0 rounded-full object-cover shadow-lg" style="border:4px solid var(--accent)">
   </section>
 
+  <section id="about" class="py-10 border-t border-black/20">
+    <h2 class="text-3xl font-bold">A Little About Me</h2>
+    <p class="mt-4 leading-relaxed">Aku memiliki ketertarikan dalam bidang Multimedia terutama Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quisquam adipisci suscipit hic maxime consequuntur totam sequi eveniet vel quaerat illum minus omnis perspiciatis labore perferendis explicabo tempore dolore, cumque eum!</p>
+  </section>
+
+  <section id="skill" class="py-10 border-t border-black/20">
+    <h2 class="text-3xl font-bold">Skill</h2>
+    <p class="mt-4 leading-relaxed">Ayam ini mempunyai skill di bidang Lorem ipsum dolor sit amet consectetur adipisicing elit. Earum minus facilis aperiam dolore iusto veritatis. Accusamus porro beatae sed illo quod a. Provident totam dolor repellendus, dolore ea perspiciatis quasi.</p>
+    <div class="mt-5 flex flex-wrap gap-3">
+      <span class="px-4 py-1.5 rounded-full font-bold text-white" style="background:var(--hdr)">HTML</span>
+      <span class="px-4 py-1.5 rounded-full font-bold text-white" style="background:var(--hdr)">Python</span>
+      <span class="px-4 py-1.5 rounded-full font-bold text-white" style="background:var(--hdr)">C++</span>
+    </div>
+  </section>
+
+  <section id="project" class="py-10 border-t border-black/20">
+    <h2 class="text-3xl font-bold">Project</h2>
+    <div class="mt-6 grid gap-5 sm:grid-cols-3">
+      <article class="p-5 rounded-xl shadow" style="background:var(--card)">
+        <h3 class="text-xl font-bold">Hospital Database System</h3>
+        <p class="mt-2 text-sm" style="color:var(--muted)">Sistem basis data untuk mengelola data pasien, dokter, dan jadwal rumah sakit.</p>
+      </article>
+      <article class="p-5 rounded-xl shadow" style="background:var(--card)">
+        <h3 class="text-xl font-bold">ESP32 Digital Clock</h3>
+        <p class="mt-2 text-sm" style="color:var(--muted)">Jam digital berbasis ESP32 yang menampilkan waktu secara real-time.</p>
+      </article>
+      <article class="p-5 rounded-xl shadow" style="background:var(--card)">
+        <h3 class="text-xl font-bold">Portable Website</h3>
+        <p class="mt-2 text-sm" style="color:var(--muted)">babababibiabiabiabuabauakdabdja.</p>
+      </article>
+    </div>
+  </section>
+
+  <section id="contact" class="py-10 border-t border-black/20">
+    <h2 class="text-3xl font-bold">Contact</h2>
+    <p class="mt-4">Email: <a class="font-bold underline" style="color:var(--accent)" href="https://en.wikipedia.org/wiki/Benjamin_Netanyahu">rafidzaldass@gmail.com</a></p>
+    <p class="mt-2">WhatsApp: <a class="font-bold underline" style="color:var(--accent)" href="https://en.wikipedia.org/wiki/Prabowo_Subianto">085274437575</a></p>
+  </section>
+</main>
+
+<footer class="py-8 text-center text-sm" style="color:var(--muted)">© 2026 Rafid Maulana Zaldas</footer>
 </body>
 </html>
